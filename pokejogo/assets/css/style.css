@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    font-family: "Inter";
+}
+
+.pokejogo {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 39.5%;
+}
+
+#personagem, #vilao {
+    visibility: hidden;
+}
+
+#jogo {
+    width: 80%;
+    height: 450px;
+    border: 2px solid #000;
+    margin: 0 auto;
+    background-image: url(../img/cenario.png);
+    background-position: 0px -250px;
+    position: relative;
+    overflow: hidden;
+}
+
+#jogo h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#personagem {
+    width: 153px;
+    height: 102px;
+    background-image: url(../img/jogador.png);
+    position: absolute;
+    bottom: 70px;
+    left: 200px;
+    background-size: 400% 400%;
+
+    background-position-x: 0px;
+    background-position-y: -64px;
+
+    animation: moveJogador 0.4s infinite;
+    animation-timing-function: step-end;
+    animation-delay: 0s;
+}
+
+#vilao {
+    width: 153px;
+    height: 102px;
+    position: absolute;
+    bottom: 70px;
+    right: -153px;
+
+    background-image: url(../img/vilao.png);
+    background-size: 400% 400%;
+    animation: moveVilao 0.4s infinite;
+    animation-timing-function: step-end;
+    animation-delay: 0s;
+    background-position-x: 0px;
+    background-position-y: -64px;
+}
+
+.pontos {
+    background-color: white;
+    max-width: 120px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.vidas {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.vidas img {
+    width: 35px;
+    height: 35px;
+}
+
+.recorde {
+    background-color: white;
+    max-width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#telaInicio {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#telaInicio h2 {
+    color: rgb(171, 14, 14);
+    font-size: 40px;
+}
+
+#btnComecar {
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffe100;
+    color: blue;
+    font-weight: 800;
+}
+
+#telaGameOver {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffd400;
+}
+
+#telaGameOver h2 {
+    font-size: 45px;
+    color: red;
+}
+
+#telaGameOver p {
+    color: white;
+}
+
+#btnReiniciar {
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ffe100;
+    color: blue;
+    font-weight: 800;
+}
+
+@keyframes moveVilao {
+    0% {
+       background-position-x: -8px; 
+    } 
+    25% {
+       background-position-x: -159px; 
+    }
+    50% {
+        background-position-x: -305px; 
+    }
+    100% {
+        background-position-x: -453px; 
+    }
+}
+
+@keyframes moveJogador {
+    0% {
+        background-position-x: 0px;
+    }
+    25% {
+        background-position-x: -151px;
+    }
+    50% {
+        background-position-x: -305px;
+    }
+    100% {
+        background-position-x: -453px;
+    }
+}
