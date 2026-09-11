@@ -8,13 +8,18 @@
     font-family: "Inter";
 }
 
+body {
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
 .pokejogo {
     font-size: 40px;
     display: flex;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 39.5%;
+    margin-left: 36%;
 }
 
 #personagem, #vilao {
